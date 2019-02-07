@@ -7,6 +7,19 @@ public class QueenBoard{
         board[i][a] = 0;
       }
     }
-    
+  countSolutions();
+  }
+  public String toString(){
+    String returnValue = "";
+    for(int i = 0; i < board.length; i++){
+      for(int a = 0; a < board[0].length; a++){
+        if (board[i][a] == 0){
+          returnValue += "_";
+        }
+        else{
+          returnValue += board[i][a] + "";
+        }
+      }
+    }
   }
 }
