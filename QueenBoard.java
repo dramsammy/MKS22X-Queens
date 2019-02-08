@@ -24,12 +24,12 @@ public class QueenBoard{
     }
     return returnValue;
   }
-  private boolean addQueen(int r, int c){
+  public boolean addQueen(int r, int c){
     if (board[r][c] == 0){
       board[r][c] = -1;
-      for (int i = 0; i < board.length; i++){
-        board[r][c + i] = board[r][c] + 1;
-        if (i < board[0].length - r){
+      for (int i = 1; i < board[0].length - c; i++){
+        board[r][c + i] = board[r][c+i] + 1;
+        if (i < board.length - r){
           board[r + i][c + i] = board[r + i][c + i] + 1;
         }
     }
@@ -41,6 +41,16 @@ public class QueenBoard{
     if (board[r][c] == -1){
       board[r][c] = 0;
     }
-  }
   return true;
+}
+  public String toStringDebug(){
+    String returnValue = "";
+    for (int i = 0; i < board.length; i++){
+      for(int a = 0; a < board[0].length; a++){
+        returnValue+= board[i][a] + "";
+      }
+      returnValue+= "\n";
+    }
+    return returnValue;
+  }
 }
