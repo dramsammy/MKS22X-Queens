@@ -13,14 +13,16 @@ public class QueenBoard{
     String returnValue = "";
     for(int i = 0; i < board.length; i++){
       for(int a = 0; a < board[0].length; a++){
-        if (board[i][a] == 0){
+        if (board[i][a] >= 0){
           returnValue += "_";
         }
         else{
-          returnValue += board[i][a] + "";
+          returnValue += "Q";
         }
       }
+      returnValue+= "\n";
     }
+    return returnValue;
   }
   private boolean addQueen(int r, int c){
     if (board[r][c] == 0){
