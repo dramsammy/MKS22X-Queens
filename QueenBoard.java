@@ -7,7 +7,7 @@ public class QueenBoard{
         board[i][a] = 0;
       }
     }
-  countSolutions();
+  //countSolutions();
   }
   public String toString(){
     String returnValue = "";
@@ -29,10 +29,18 @@ public class QueenBoard{
       board[r][c] = -1;
       for (int i = 0; i < board.length; i++){
         board[r][c + i] = board[r][c] + 1;
-        board[r + i][c + i] = board[r + i][c + i] + 1;
+        if (i < board[0].length - r){
+          board[r + i][c + i] = board[r + i][c + i] + 1;
+        }
     }
     return true;
     }
     return false;
   }
+  private boolean removeQueen(int r, int c){
+    if (board[r][c] == -1){
+      board[r][c] = 0;
+    }
+  }
+  return true;
 }
