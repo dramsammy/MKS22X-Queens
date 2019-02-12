@@ -90,7 +90,20 @@ public class QueenBoard{
     return false;
   }
   public boolean solveP(int count){
-    
+    if (count >= board.length){
+      return true;
+    }
+    else{
+      for(int i = 0; i < board.length; i++){
+        if (addQueen(i, count)){
+          if (solveP(count + i)){
+            return true;
+          }
+          removeQueen(i, count);
+        }
+      }
+      return false;
+    }
   }
   private void clear(){
     for (int i = 0; i < board.length; i++){
