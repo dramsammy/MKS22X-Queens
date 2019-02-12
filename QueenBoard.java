@@ -27,12 +27,12 @@ public class QueenBoard{
   public boolean addQueen(int r, int c){
     if (board[r][c] == 0){
       board[r][c] = -1;
-      for (int i = 1; i < board[0].length - c; i++){
+      for (int i = 1; i < board[0].length; i++){
         board[r][c + i] = board[r][c+i] + 1;
-        if (i < board.length - r){
+        if (r + i < board[0].length){
           board[r + i][c + i] = board[r + i][c + i] + 1;
         }
-        if (i < board.length - c && (i < r)){
+        if (r - i < board[0].length){
           board[r - i][c + i] = board[r - i][c + i] + 1;
         }
     }
