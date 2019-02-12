@@ -126,6 +126,9 @@ public class QueenBoard{
     return returnValue;
   }
   public int countSolutions(){
+    if (board[0][0]!= 0){
+      throw new IllegalStateException();
+    }
     clear();
     return countH(0);
   }
