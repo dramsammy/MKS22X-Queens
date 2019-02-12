@@ -9,7 +9,7 @@ public class Driver{
     test.addQueen(1,1);
     System.out.println(test);
     System.out.println(test.toStringDebug());
-    test.addQueen(3,4);
+    test.addQueen(3,2);
     System.out.println(test);
     System.out.println(test.toStringDebug());
   }
