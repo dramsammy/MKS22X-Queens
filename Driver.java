@@ -22,7 +22,7 @@ public class Driver{
     System.out.println(test1.countSolutions());
     QueenBoard test3 = new QueenBoard(2);
     System.out.println(test3.solve());
-    QueenBoard test4 = new QueenBoard(10);
+    QueenBoard test4 = new QueenBoard(8);
     System.out.println(test4.countSolutions());
 }
 }
