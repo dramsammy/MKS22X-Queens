@@ -19,5 +19,8 @@ public class Driver{
     System.out.println(test1.solve());
     QueenBoard test2 = new QueenBoard(3);
     System.out.println(test2.solve());
-  }
+    System.out.println(test1.countSolutions());
+    QueenBoard test3 = new QueenBoard(2);
+    System.out.println(test3.solve());
+}
 }
