@@ -28,12 +28,12 @@ public class QueenBoard{
     if (board[r][c] == 0){
       board[r][c] = -1;
       for (int i = 1; c + i < board.length; i++){
-        board[r][c + i] = board[r][c+i] + 1;
+        board[r][c + i] += 1;
         if (r + i < board.length){
-          board[r + i][c + i] = board[r + i][c + i] + 1;
+          board[r + i][c + i] += 1;
         }
         if (r - i >= 0){
-          board[r - i][c + i] = board[r - i][c + i] + 1;
+          board[r - i][c + i] += 1;
         }
     }
     return true;
@@ -44,12 +44,12 @@ public class QueenBoard{
     if (board[r][c] == -1){
       board[r][c] = 0;
       for (int i = 1; c + i < board.length; i++){
-        board[r][c + i] = board[r][c+i] - 1;
+        board[r][c + i] -= 1;
         if (r + i < board.length){
-          board[r + i][c + i] = board[r + i][c + i] - 1;
+          board[r + i][c + i] -= 1;
         }
         if (r - i >= 0){
-          board[r - i][c + i] = board[r - i][c + i] - 1;
+          board[r - i][c + i] -=1;
         }
     }
   return true;
@@ -89,17 +89,17 @@ public class QueenBoard{
     }
     return false;
   }
-  public boolean solveP(int count){
-    if (count >= board.length){
+  public boolean solveP(int col){
+    if (col >= board.length){
       return true;
     }
     else{
       for(int i = 0; i < board.length; i++){
-        if (addQueen(i, count)){
-          if (solveP(count + i)){
+        if (addQueen(i, col)){
+          if (solveP(col + 1)){
             return true;
           }
-          else removeQueen(i, count);
+          else removeQueen(i, col);
         }
       }
       return false;
