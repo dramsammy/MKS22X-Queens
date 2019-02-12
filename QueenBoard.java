@@ -100,5 +100,13 @@ public class QueenBoard{
     if (count >= board.length){
       return 1;
     }
+    int returnValue = 0;
+    for( int i = 0; i < board.length; i++){
+      if (addQueen(r,i)){
+        returnValue += countH(r + i);
+        removeQueen(i, count);
+      }
+    }
+    return returnValue;
   }
 }
