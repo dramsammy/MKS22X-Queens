@@ -73,5 +73,16 @@ public class QueenBoard{
     if (recursion == t){
       return true;
     }
+    for(int i = 0; i < board[0].length; i++){
+      if (addQueen(r, i)){
+        if(solveh(r + i, i, recursion + 1, t)){
+          return true;
+        }
+        else{
+          removeQueen(r, i);
+        }
+      }
+    }
+    return false;
   }
 }
