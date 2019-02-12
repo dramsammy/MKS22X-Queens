@@ -43,9 +43,19 @@ public class QueenBoard{
   private boolean removeQueen(int r, int c){
     if (board[r][c] == -1){
       board[r][c] = 0;
+      for (int i = 1; i < board[0].length; i++){
+        board[r][c + i] = board[r][c+i] - 1;
+        if (r + i < board[0].length){
+          board[r + i][c + i] = board[r + i][c + i] - 1;
+        }
+        if (r - i >= 0){
+          board[r - i][c + i] = board[r - i][c + i] - 1;
+        }
     }
   return true;
-}
+  }
+  return false;
+  }
   public String toStringDebug(){
     String returnValue = "";
     for (int i = 0; i < board.length; i++){
