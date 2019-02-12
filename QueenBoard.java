@@ -32,6 +32,9 @@ public class QueenBoard{
         if (i < board.length - r){
           board[r + i][c + i] = board[r + i][c + i] + 1;
         }
+        if (i < board.length - c && (i < r)){
+          board[r - i][c + i] = board[r - i][c + i] + 1;
+        }
     }
     return true;
     }
