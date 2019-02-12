@@ -71,7 +71,7 @@ public class QueenBoard{
       throw new IllegalStateException();
     }
     clear();
-    return solveh(0,0,0, board[0].length);
+    return solveP(0);
   }
   public boolean solveh(int r, int c, int recursion, int t){
     if (recursion == t){
