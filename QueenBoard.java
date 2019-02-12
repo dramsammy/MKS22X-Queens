@@ -91,7 +91,7 @@ public class QueenBoard{
   }
   private void clear(){
     for (int i = 0; i < board.length; i++){
-      for (int b = 0; j < board[0].length; j++){
+      for (int b = 0; b < board[0].length; b++){
         board[i][b] = 0;
       }
     }
@@ -102,8 +102,8 @@ public class QueenBoard{
     }
     int returnValue = 0;
     for( int i = 0; i < board.length; i++){
-      if (addQueen(r,i)){
-        returnValue += countH(r + i);
+      if (addQueen(i,count)){
+        returnValue += countH(count + i);
         removeQueen(i, count);
       }
     }
