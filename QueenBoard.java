@@ -66,4 +66,12 @@ public class QueenBoard{
     }
     return returnValue;
   }
+  public boolean solve(){
+    return solveh(0,0,0, board[0].length);
+  }
+  public boolean solveh(int r, int c, int recursion, int t){
+    if (recursion == t){
+      return true;
+    }
+  }
 }
