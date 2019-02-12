@@ -109,4 +109,8 @@ public class QueenBoard{
     }
     return returnValue;
   }
+  public int countSolutions(){
+    clear();
+    return countH(0);
+  }
 }
