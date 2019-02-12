@@ -89,6 +89,9 @@ public class QueenBoard{
     }
     return false;
   }
+  public boolean solveP(int count){
+    
+  }
   private void clear(){
     for (int i = 0; i < board.length; i++){
       for (int b = 0; b < board[0].length; b++){
