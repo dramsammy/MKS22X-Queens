@@ -96,4 +96,9 @@ public class QueenBoard{
       }
     }
 }
+  public int countH(int count){
+    if (count >= board.length){
+      return 1;
+    }
+  }
 }
