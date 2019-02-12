@@ -12,5 +12,8 @@ public class Driver{
     test.addQueen(3,2);
     System.out.println(test);
     System.out.println(test.toStringDebug());
+    test.removeQueen(3,2);
+    System.out.println(test);
+    System.out.println(test.toStringDebug());
   }
 }
