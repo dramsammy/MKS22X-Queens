@@ -85,4 +85,11 @@ public class QueenBoard{
     }
     return false;
   }
+  private void clear(){
+    for (int i = 0; i < board.length; i++){
+      for (int b = 0; j < board[0].length; j++){
+        board[i][b] = 0;
+      }
+    }
+}
 }
