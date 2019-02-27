@@ -93,7 +93,7 @@ public class QueenBoard{
     if (col >= board.length){
       return true;
     }
-    else{
+
       for(int i = 0; i < board.length; i++){
         if (addQueen(i, col)){
           if (solveP(col + 1)){
@@ -103,7 +103,7 @@ public class QueenBoard{
         }
       }
       return false;
-    }
+
   }
   private void clear(){
     for (int i = 0; i < board.length; i++){
@@ -113,13 +113,13 @@ public class QueenBoard{
     }
 }
   public int countH(int count){
+    int returnValue = 0;
     if (count >= board.length){
       return 1;
     }
-    int returnValue = 0;
     for( int i = 0; i < board.length; i++){
       if (addQueen(i,count)){
-        returnValue += countH(count + i);
+        returnValue += countH(count + 1);
         removeQueen(i, count);
       }
     }
